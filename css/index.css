@@ -5,8 +5,13 @@
   border:0 none;
   font-size: 0.1rem;
   font-family: "Microsoft YaHei";
+  vertical-align: middle;
 }
-
+html,
+body{
+  height:100%;
+  width: 100%;
+}
 /*music转盘*/
 #music{
   width: 0.96rem;
@@ -17,8 +22,11 @@
   top:0.5rem;
   right: 0.5rem;
   text-align: center;
-  line-height:0.96rem;
+  line-height:0.88rem;
   background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .circle{
   vertical-align: middle;
@@ -33,3 +41,84 @@
   height: 0.43rem;
 }
 
+/*每一屏公共样式*/
+.page{
+  height:100%;
+  width: 100%;
+  position: relative;
+}
+.page .bg{
+  height:100%;
+  width:100%;
+  position: absolute;
+  z-index:-1;
+  top:0;
+}
+/*第一屏*/
+#page1 .bg{
+  background: url("../img/p1_bg.jpg") center center no-repeat;
+  background-size: 100%;
+}
+#page1 .p1_deng{
+  width: 2.9rem;
+  height:5.6rem;
+  position: absolute;
+  /* top:-0.01rem;*/
+  right:0;
+  left:0;
+  margin:auto;
+  background:url("../img/p1_lantern.png") center bottom no-repeat;
+  background-size:contain;
+  box-sizing: border-box;
+  padding-top: 2.4rem;
+  text-align: center;
+  font-size: 0.24rem;
+
+}
+#page1 .p1_deng:before{
+  width:2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  right:0;
+  left:0;
+  margin:auto;
+  top: -.3rem;
+  bottom:0;
+  content: '';
+  background-color: #d9234e;
+  box-shadow: 0 0 0.2rem 0.1rem #d9234e;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+#page1 .p1_moon{
+  position: absolute;
+  right:0;
+  left:0;
+  margin:auto;
+  bottom:1rem;
+  background: url("../img/p1_imooc.png") no-repeat center center;
+  height:2rem;
+  width: 3.5rem;
+  background-size: contain;
+}
+.p1_words{
+  font-size:.24rem;
+  position: absolute;
+  bottom: .5rem;
+  text-align: center;
+  width:100%;
+}
+
+
+/*第二屏*/
+#page2 .bg{
+  background: url("../img/p2_bg.jpg") center center no-repeat;
+  background-size: 100%;
+}
+
+
+/*第三屏*/
+#page3 .bg{
+  background: url("../img/p3_bg.jpg") center center no-repeat;
+  background-size: 100%;
+}
