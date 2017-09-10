@@ -45,7 +45,7 @@ body{
 .page{
   height:100%;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 .page .bg{
   height:100%;
@@ -55,6 +55,9 @@ body{
   top:0;
 }
 /*第一屏*/
+#page1{
+  display: none;
+}
 #page1 .bg{
   background: url("../img/p1_bg.jpg") center center no-repeat;
   background-size: 100%;
@@ -111,14 +114,113 @@ body{
 
 
 /*第二屏*/
+#page2{
+  display: none;
+}
 #page2 .bg{
   background: url("../img/p2_bg.jpg") center center no-repeat;
   background-size: 100%;
 }
+#page2 .p2_circle{
+  height:2rem;
+  width:2rem;
+  background: url(../img/p2_circle_outer.png) no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  right:0;
+  left:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+.middle{
+  height:1.5rem;
+  width:1.5rem;
+  background: url("../img/p2_circle_middle.png") center center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  margin:auto;
+  right:0;
+  bottom:0;
+}
+.inner{
+  height:1rem;
+  width:1rem;
+  background: url("../img/p2_circle_inner.png") center center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  margin:auto;
+  right:0;
+  bottom:0;
+}
+.p2_2016{
+  height: 0.8rem;
+  width:0.7rem;
+  background: url("../img/p2_2016.png") center center no-repeat;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  background-size: 100%;
 
-
+}
 /*第三屏*/
+#page3{
+  display: block;
+}
 #page3 .bg{
   background: url("../img/p3_bg.jpg") center center no-repeat;
+  background-size: 100%;
+}
+#page3 .p3_logo{
+  width:2.2rem;
+  height:0.72rem;
+  background: url("../img/p3_logo.png") center center no-repeat;
+  background-size: 100%;
+  margin:1rem auto 0;
+}
+.p3_left{
+   position: absolute;
+   right:0.3rem;
+   top:2.5rem;
+   width:1.64rem;
+   height:4.74rem;
+   background: url("../img/p3_couplet_first.png") no-repeat;
+  background-size: 100%;
+ }
+.p3_right{
+  position: absolute;
+  left:0.3rem;
+  top:2.5rem;
+  width:1.64rem;
+  height:4.74rem;
+  background: url("../img/p3_couplet_second.png") no-repeat;
+  background-size: 100%;
+}
+.p3_title{
+  position: absolute;
+  height:5.4rem;
+  width:3rem;
+  left:0;
+  right:0;
+  margin:0.1rem auto 0 ;
+  background: url("../img/p3_title.png") no-repeat;
+  background-size: 100%;
+}
+.p3_blessing{
+  height:2.05rem;
+  width: 2.05rem;
+  background: url("../img/p3_blessing.png") no-repeat;
+  left:0;
+  right:0;
+  margin:auto;
+  bottom:.5rem;
+  position: absolute;
   background-size: 100%;
 }
