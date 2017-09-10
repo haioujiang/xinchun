@@ -27,6 +27,7 @@ body{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 100;
 }
 .circle{
   vertical-align: middle;
@@ -40,7 +41,7 @@ body{
   width:0.27rem;
   height: 0.43rem;
 }
-#music img.play{
+.play img:nth-child(1){
   -webkit-animation: rotate 4s linear infinite;
   animation:  rotate 4s linear infinite;
 }
@@ -51,6 +52,12 @@ body{
   100%{
     transform: rotate(360deg);
   }
+}
+.animating{
+  animation-play-state: running;
+}
+.animat_stop{
+  animation-play-state:paused;
 }
 /*每一屏公共样式*/
 .page{
@@ -67,7 +74,7 @@ body{
 }
 /*第一屏*/
 #page1{
-  display: none;
+  display: block;
 }
 #page1 .bg{
   background: url("../img/p1_bg.jpg") center center no-repeat;
@@ -137,11 +144,17 @@ body{
 /*第二屏*/
 #page2{
   display: none;
+  transition: all .3s linear;
+}
+.fade{
+  opacity:0.3 ;
+  transform:translateY(-100%);
 }
 #page2 .bg{
   background: url("../img/p2_bg.jpg") center center no-repeat;
   background-size: 100%;
 }
+
 #page2 .p2_circle{
   height:2rem;
   width:2rem;
@@ -212,7 +225,8 @@ body{
 }
 /*第三屏*/
 #page3{
-  display: block;
+  display: none;
+  transition: all  .3s linear;
 }
 #page3 .bg{
   background: url("../img/p3_bg.jpg") center center no-repeat;
@@ -224,6 +238,9 @@ body{
   background: url("../img/p3_logo.png") center center no-repeat;
   background-size: 100%;
   margin:1rem auto 0;
+}
+.fadeIn{
+  transform: translateY(-100%);
 }
 .p3_left{
   position: absolute;
