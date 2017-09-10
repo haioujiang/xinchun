@@ -40,18 +40,7 @@ body{
   width:0.27rem;
   height: 0.43rem;
 }
-#music img.play{
-  -webkit-animation: rotate 4s linear infinite;
-  animation:  rotate 4s linear infinite;
-}
-@keyframes rotate {
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
+
 /*每一屏公共样式*/
 .page{
   height:100%;
@@ -77,6 +66,7 @@ body{
   width: 2.9rem;
   height:5.6rem;
   position: absolute;
+  /* top:-0.01rem;*/
   right:0;
   left:0;
   margin:auto;
@@ -86,11 +76,11 @@ body{
   padding-top: 2.4rem;
   text-align: center;
   font-size: 0.24rem;
-  color: #fff;
+
 }
 #page1 .p1_deng:before{
-  width:1.5rem;
-  height: 1.5rem;
+  width:2.2rem;
+  height: 2.2rem;
   position: absolute;
   right:0;
   left:0;
@@ -99,20 +89,9 @@ body{
   bottom:0;
   content: '';
   background-color: #d9234e;
-  box-shadow: 0 0 0.6rem 0.6rem #d9234e;
+  box-shadow: 0 0 0.2rem 0.1rem #d9234e;
+  opacity: 0.5;
   border-radius: 50%;
-  animation:scale .5s linear infinite alternate;
-  z-index: -1;
-}
-
-@keyframes scale {
-  0%{
-    transform: scale(0.8);
-    opacity: .5;
-  }
-  100%{
-    opacity:1;
-  }
 }
 #page1 .p1_moon{
   position: absolute;
@@ -153,7 +132,6 @@ body{
   top:0;
   bottom:0;
   margin:auto;
-  animation:cicle_rotate 1s  5s linear infinite;
 }
 .middle{
   height:1.5rem;
@@ -166,7 +144,6 @@ body{
   margin:auto;
   right:0;
   bottom:0;
-  animation:cicle_rotate_reverse 1s 3s linear infinite;
 }
 .inner{
   height:1rem;
@@ -179,7 +156,6 @@ body{
   margin:auto;
   right:0;
   bottom:0;
-  animation:cicle_rotate 1s 1s linear infinite;
 }
 .p2_2016{
   height: 0.8rem;
@@ -193,22 +169,6 @@ body{
   margin:auto;
   background-size: 100%;
 
-}
-@keyframes cicle_rotate {
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
-@keyframes cicle_rotate_reverse {
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(-720deg);
-  }
 }
 /*第三屏*/
 #page3{
@@ -232,8 +192,7 @@ body{
    width:1.64rem;
    height:4.74rem;
    background: url("../img/p3_couplet_first.png") no-repeat;
-   background-size: 100%;
-   animation: p3_rotate 1s linear infinite alternate;
+  background-size: 100%;
  }
 .p3_right{
   position: absolute;
@@ -243,8 +202,6 @@ body{
   height:4.74rem;
   background: url("../img/p3_couplet_second.png") no-repeat;
   background-size: 100%;
-  animation: p3_rotate 1s linear infinite alternate;
-
 }
 .p3_title{
   position: absolute;
@@ -266,13 +223,4 @@ body{
   bottom:.5rem;
   position: absolute;
   background-size: 100%;
-  animation:cicle_rotate 2s infinite linear ;
-}
-@keyframes p3_rotate {
-  0%{
-    transform: scale(0.9);
-  }
-  100%{
-    transform: scale(1);
-  }
 }
